@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tablero</h1>
+            <h1>Administrar Ventas</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -21,7 +21,7 @@
 
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
+        <div class="card-header bg-teal">
           <h3 class="card-title">Title</h3>
 
           <div class="card-tools">
