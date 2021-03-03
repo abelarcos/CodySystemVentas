@@ -13,12 +13,10 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="icon" href="Vistas/img/Plantilla/AdminLTELogo.png">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="Vistas/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="Vistas/dist/css/adminlte.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-
-  
   <!-- jQuery -->
   <script src="Vistas/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
