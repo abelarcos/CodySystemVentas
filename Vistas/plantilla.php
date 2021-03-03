@@ -11,10 +11,12 @@
   <link rel="stylesheet" href="Vistas/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="icon" href="Vistas/img/Plantilla/AdminLTELogo.png">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="Vistas/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 
   
   <!-- jQuery -->
@@ -28,42 +30,60 @@
 
   
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini login-page">
 <!-- Site wrapper -->
-<div class="wrapper">
-  <!-- Navbar -->
+<?php
 
-  <?php  include "Modulos/cabezote.php"; ?>
-  
-  <!-- /.navbar -->
+  if(isset($_SESSION['iniciarSesion']) && $_SESSION["iniciarSesion"] == "ok"){
 
-  <!-- Main Sidebar Container -->
-  <?php  include "Modulos/aside.php"; ?>
-  
-  <!-- Content Wrapper. Contains page content -->
-  <?php 
-    if(isset($_GET['ruta'])){
-      if($_GET["ruta"] == "inicio" ||
-         $_GET["ruta"] == "usuarios" ||
-         $_GET["ruta"] == "categorias" ||
-         $_GET["ruta"] == "productos" ||
-         $_GET["ruta"] == "clientes" ||
-         $_GET["ruta"] == "ventas" ||
-         $_GET["ruta"] == "crear-venta" ||
-         $_GET["ruta"] == "reportes"){
-          include "Modulos/". $_GET["ruta"]. ".php";
-         }
-    }
-  ?>
-  <!-- /.content-wrapper -->
-  <?php include "Modulos/footer.php"; ?>
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+    echo  '<div class="wrapper">';
+
+      // <!-- Navbar -->
+    
+      include "Modulos/cabezote.php"; 
+      
+      // <!-- /.navbar -->
+    
+      // <!-- Main Sidebar Container -->
+      include "Modulos/aside.php"; 
+      
+      // <!-- Content Wrapper. Contains page content -->
+      
+        if(isset($_GET['ruta'])){
+          if($_GET["ruta"] == "inicio" ||
+            $_GET["ruta"] == "usuarios" ||
+            $_GET["ruta"] == "categorias" ||
+            $_GET["ruta"] == "productos" ||
+            $_GET["ruta"] == "clientes" ||
+            $_GET["ruta"] == "ventas" ||
+            $_GET["ruta"] == "crear-venta" ||
+            $_GET["ruta"] == "reportes"){
+              include "Modulos/". $_GET["ruta"]. ".php";
+            }else{
+              include "Modulos/404.php";
+            }
+        }else{
+          include "Modulos/inicio.php";
+        }
+    
+      // <!-- /.content-wrapper -->
+      include "Modulos/footer.php"; 
+      // <!-- Control Sidebar -->
+    
+      // <aside class="control-sidebar control-sidebar-dark">
+      //   <!-- Control sidebar content goes here -->
+      // </aside>
+      // <!-- /.control-sidebar -->
+    echo '</div>';
+    // <!-- ./wrapper -->
+    
+  }else{
+
+     include "Modulos/login.php";
+  }
+
+?>
+
 
 </body>
 </html>
