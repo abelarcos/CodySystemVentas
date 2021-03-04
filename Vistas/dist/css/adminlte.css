@@ -19800,7 +19800,7 @@ html.maximized-card {
   height: 100vh;
   -ms-flex-pack: center;
   justify-content: center;
-  background: linear-gradient(rgba(0,0,0,1), rgb(0, 50, 39));
+  background: linear-gradient(rgba(0,0,0,1), rgb(0, 30, 50, 1));
 }
 
 .login-page #back{
