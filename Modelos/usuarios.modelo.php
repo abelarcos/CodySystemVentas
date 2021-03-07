@@ -1,8 +1,8 @@
 <?php
 
-require_once "Conexion.php";
+require_once "conexion.php";
 
-class Usuarios{
+class ModeloUsuarios{
 
     //Mostrar Usuarios
     static public function MostrarUsuarios($tabla, $item, $valor){

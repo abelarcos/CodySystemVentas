@@ -13,9 +13,10 @@ class UsuariosController{
                 $item = "usuario";
                 $valor = $_POST["ingUsuario"];
 
-                $respuesta = Usuarios::MostrarUsuarios($tabla,$item,$valor);
-                // var_dup($respuesta);
+                $respuesta = ModeloUsuarios::MostrarUsuarios($tabla,$item,$valor);
+                die(var_dump($respuesta));
                 if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $_POST["ingPassword"]){
+
                     $_SESSION["iniciarSesion"] = "ok";
 
                     echo '<script>
