@@ -1,5 +1,5 @@
 <?php
-class UsuariosController{
+class ControladorUsuarios{
     
     //ingreso de usuario login
     public function ctrIngresoUsuario(){
@@ -13,8 +13,11 @@ class UsuariosController{
                 $item = "usuario";
                 $valor = $_POST["ingUsuario"];
 
-                $respuesta = ModeloUsuarios::MostrarUsuarios($tabla,$item,$valor);
-                die(var_dump($respuesta));
+                $respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla,$item,$valor);
+
+                var_dump($respuesta);
+                die();
+               
                 if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $_POST["ingPassword"]){
 
                     $_SESSION["iniciarSesion"] = "ok";
@@ -28,7 +31,7 @@ class UsuariosController{
                     echo '<br><div class="alert alert-danger">Error al ingresar, vuelve a intentarlo</div>';
                 }
 
-               }
+            }
 
 
         }

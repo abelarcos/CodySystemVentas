@@ -35,7 +35,7 @@
 <!-- Site wrapper -->
 <?php
 
-  if(isset($_SESSION['iniciarSesion']) && $_SESSION["iniciarSesion"] == "ok"){
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
     echo  '<div class="wrapper">';
 
@@ -50,7 +50,7 @@
       
       // <!-- Content Wrapper. Contains page content -->
       
-        if(isset($_GET['ruta'])){
+        if(isset($_GET["ruta"])){
           if($_GET["ruta"] == "inicio" ||
             $_GET["ruta"] == "usuarios" ||
             $_GET["ruta"] == "categorias" ||

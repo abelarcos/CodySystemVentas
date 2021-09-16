@@ -8,7 +8,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Iniciar Session</p>
 
-        <form  method="post">
+      <form  method="POST">
             <div class="input-group mb-3">
             <input type="email" class="form-control" name="ingUsuario" placeholder="Usuario">
             <div class="input-group-append">
@@ -37,12 +37,11 @@
             </div>
             <?php
 
-                $login = new UsuariosController();
+                $login = new ControladorUsuarios();
                 $login->ctrIngresoUsuario();
             
-            
             ?>
-        </form>
+      </form>
     </div>
     <!-- /.login-card-body -->
   </div>
